@@ -1,0 +1,25 @@
+<div class="center container-fluid">
+    <div class="row">
+        <h1>Sellar SignUp Form</h1>
+        <form #sellarsignUp="ngForm" (ngSubmit)="signUp(sellarsignUp.value)">
+            <div class="padding-top">
+
+                <input type="email" name="name" class="form-control" id="exampleInputEmail1" placeholder="Enter Name"
+                    ngModel>
+            </div>
+            <div class="padding-top">
+                <input type="password" name="password" class="form-control" id="exampleInputEmail1"
+                    placeholder="Enter Password" ngModel>
+            </div>
+            <div class="padding-top">
+
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Enter Email"
+                    ngModel>
+            </div>
+
+            <div class="padding-top">
+                <button type="submit" class="col-12 btn btn-outline-danger">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>

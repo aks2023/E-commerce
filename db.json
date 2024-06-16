@@ -1,0 +1,28 @@
+{
+  "sellar": [
+    {
+      "id": "cec5",
+      "name": "Ayush",
+      "email": "ayush@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "f0d6",
+      "name": "Shreyas",
+      "password": "1234",
+      "email": "ssshressyas34@gmail.com"
+    },
+    {
+      "id": "93b2",
+      "name": "tullu",
+      "password": "12345",
+      "email": "asdsada@gmail.com"
+    },
+    {
+      "id": "f355",
+      "name": "",
+      "password": "",
+      "email": ""
+    }
+  ]
+}
