@@ -9,3 +9,12 @@ export interface DataTypeLogin {
     password: string;
 
 }
+export interface Products {
+    productName: string;
+    price: number;
+    Description: string;
+    category: string;
+    imageUrl: string;
+
+
+}

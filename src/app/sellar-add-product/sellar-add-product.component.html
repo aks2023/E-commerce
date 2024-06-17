@@ -1,1 +1,38 @@
-<p>sellar-add-product works!</p>
+<div class="center container-fluid">
+    <div class="row">
+        <h1>Add New Product</h1>
+        <form #addProducts="ngForm" (ngSubmit)="addProduct(addProducts.value)">
+            <div class="padding-top">
+                <input type="name" name="name" class="form-control" id="exampleInputEmail1"
+                    placeholder="Enter Product Name" ngModel>
+            </div>
+            <div class="padding-top">
+                <input type="number" name="price" class="form-control" id="prices" placeholder="Enter Product Price"
+                    ngModel>
+            </div>
+
+            <div class="padding-top">
+
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"
+                    placeholder="Enter Description" ngModel></textarea>
+            </div>
+            <div class="padding-top">
+                <input type="text" name="category" class="form-control" id="prices" placeholder="Enter Product Category"
+                    ngModel>
+            </div>
+            <div class="padding-top">
+                <input type="text" name="image" class="form-control" id="prices" placeholder="Enter Product Image URl"
+                    ngModel>
+            </div>
+
+            <div class="padding-top">
+                <button type="submit" class="col-12 btn btn-outline-warning" data-mdb-ripple-init>Add Product</button>
+            </div>
+
+
+
+
+        </form>
+        <h3>{{productMessage}}</h3>
+    </div>
+</div>

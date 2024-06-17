@@ -62,5 +62,31 @@
       "password": "",
       "email": ""
     }
+  ],
+  "products": [
+    {
+      "id": "67d1",
+      "productName": "iphone 14",
+      "price": "100000",
+      "Description": "The iPhone 14 and iPhone 14 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the sixteenth-generation iPhones, succeeding the iPhone 13 and iPhone 13 Mini, and were announced during Apple Event, Apple Park in Cupertino, California,",
+      "category": "mobiles",
+      "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.in%2FApple-iPhone-14-128GB-Midnight%2Fdp%2FB0BDHX8Z63&psig=AOvVaw0YTxMgKUj6P9pywleSr6HG&ust=1718727585121000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwjLyNeqheOGAxXTa2wGHVr6AR4QjRx6BAgAEBY"
+    },
+    {
+      "id": "e8c1",
+      "name": "samsung",
+      "price": 125000,
+      "description": "asfasfasf",
+      "category": "mobile",
+      "image": "asfasfsa"
+    },
+    {
+      "id": "95a0",
+      "name": "sdfafa",
+      "price": 4,
+      "description": "safasf",
+      "category": "afasfsafas",
+      "image": "asfasdfasf"
+    }
   ]
 }

@@ -4,7 +4,13 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
+    <div class="row">
+        <div *ngIf="menuType === 'default'" class=" col-12 input-group">
+            <input style="margin-right: 20px;" type="search" class="  rounded" placeholder="Search" aria-label="Search"
+                aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-warning" data-mdb-ripple-init>search</button>
+        </div>
+    </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li *ngIf="menuType === 'default'" class="nav-item active">
@@ -17,10 +23,10 @@
                 <a class="nav-link" href="#">Login </a>
             </li>
             <li *ngIf="menuType === 'sellar'" class="nav-item">
-                <a class="nav-link" routerLink="sellar-auth">Product List</a>
+                <a class="nav-link" routerLink="sellar-home">Product List</a>
             </li>
             <li *ngIf="menuType === 'sellar'" class="nav-item">
-                <a class="nav-link" routerLink="sellar-auth">Add Product</a>
+                <a class="nav-link" routerLink="sellar-add-product">Add Product</a>
             </li>
             <li *ngIf="menuType === 'sellar'" class="nav-item">
                 <a class="nav-link" (click)="logout()">Logout</a>
@@ -31,12 +37,6 @@
 
         </ul>
 
-        <div class="row">
-            <div *ngIf="menuType === 'default'" class=" col-12 input-group">
-                <input style="margin-right: 20px;" type="search" class="  rounded" placeholder="Search"
-                    aria-label="Search" aria-describedby="search-addon" />
-                <button type="button" class="btn btn-outline-warning" data-mdb-ripple-init>search</button>
-            </div>
-        </div>
+
     </div>
 </nav>

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { SellarHomeComponent } from './sellar-home/sellar-home.component';
 
 import { authSellarGuard } from './auth-sellar.guard';
+import { SellarAddProductComponent } from './sellar-add-product/sellar-add-product.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'sellar-home', component: SellarHomeComponent, canActivate: [authSellarGuard]
+  },
+  {
+    path: 'sellar-add-product', component: SellarAddProductComponent, canActivate: [authSellarGuard]
   }
 ];
 
