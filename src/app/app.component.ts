@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SellarService } from './services/sellar.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'e-com';
+  constructor(private sellarService: SellarService) {
+
+  }
+
 }

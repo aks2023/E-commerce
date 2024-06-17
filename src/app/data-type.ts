@@ -3,3 +3,9 @@ export interface DataType {
     password: string;
     email: string;
 }
+
+export interface DataTypeLogin {
+    email: string;
+    password: string;
+
+}

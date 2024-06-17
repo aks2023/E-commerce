@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">E-Commerce</a>
+    <a class="navbar-brand" routerLink="home">E-Commerce</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,24 +7,35 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li *ngIf="menuType === 'default'" class="nav-item active">
                 <a class="nav-link" routerLink="home">Home </a>
             </li>
-            <li class="nav-item">
+            <li *ngIf="menuType === 'default'" class="nav-item">
                 <a class="nav-link" routerLink="sellar-auth">Seller</a>
             </li>
-            <li class="nav-item">
+            <li *ngIf="menuType === 'default'" class="nav-item">
                 <a class="nav-link" href="#">Login </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
+            <li *ngIf="menuType === 'sellar'" class="nav-item">
+                <a class="nav-link" routerLink="sellar-auth">Product List</a>
             </li>
+            <li *ngIf="menuType === 'sellar'" class="nav-item">
+                <a class="nav-link" routerLink="sellar-auth">Add Product</a>
+            </li>
+            <li *ngIf="menuType === 'sellar'" class="nav-item">
+                <a class="nav-link" (click)="logout()">Logout</a>
+            </li>
+            <li *ngIf="menuType === 'sellar'" class="nav-item">
+                <a class="nav-link">{{sellarName}}</a>
+            </li>
+
         </ul>
+
         <div class="row">
-            <div class="input-group">
-                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                    aria-describedby="search-addon" />
-                <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
+            <div *ngIf="menuType === 'default'" class=" col-12 input-group">
+                <input style="margin-right: 20px;" type="search" class="  rounded" placeholder="Search"
+                    aria-label="Search" aria-describedby="search-addon" />
+                <button type="button" class="btn btn-outline-warning" data-mdb-ripple-init>search</button>
             </div>
         </div>
     </div>

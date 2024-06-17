@@ -1,4 +1,4 @@
-<div class="center container-fluid">
+<div class="center container-fluid" *ngIf="!showLogin">
     <div class="row">
         <h1>Sellar SignUp Form</h1>
         <form #sellarsignUp="ngForm" (ngSubmit)="signUp(sellarsignUp.value)">
@@ -20,6 +20,41 @@
             <div class="padding-top">
                 <button type="submit" class="col-12 btn btn-outline-danger">Sign Up</button>
             </div>
+            <div class="padding-top">
+                <button type="button" class=" col-12 btn btn-outline-success" (click)="openLogin()">Already have a
+                    account? click to
+                    login</button>
+            </div>
+            <div class="padding-top">
+
+            </div>
         </form>
+    </div>
+</div>
+
+<div class="center container-fluid" *ngIf="showLogin">
+    <div class="row">
+        <h1>Sellar Login Form</h1>
+        <form #sellarLogin="ngForm" (ngSubmit)="login(sellarLogin.value)">
+            <div class="padding-top">
+
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Enter Email"
+                    ngModel>
+            </div>
+            <div class="padding-top">
+                <input type="password" name="password" class="form-control" id="exampleInputEmail1"
+                    placeholder="Enter Password" ngModel>
+            </div>
+
+
+            <div class="padding-top">
+                <button type="submit" class="col-12 btn btn-outline-danger">Login</button>
+            </div>
+            <div class="padding-top">
+                <button type="button" class="col-12 btn btn-outline-success" (click)="openSignp()">Don't have a account?
+                    SignUp</button>
+            </div>
+        </form>
+        <h4>{{authError}}</h4>
     </div>
 </div>
